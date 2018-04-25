@@ -1,5 +1,5 @@
 from .api_retriever import ApiRetriever
-from nba_shotcharts.utils import constants
+from nba_stats.utils import constants
 
 
 class PlayersRetriever(ApiRetriever):

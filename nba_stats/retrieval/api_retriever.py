@@ -1,7 +1,7 @@
 from collections import OrderedDict
 import pandas as pd
 import requests
-from nba_shotcharts.utils import constants
+from nba_stats.utils import constants
 
 
 class ApiRetriever:

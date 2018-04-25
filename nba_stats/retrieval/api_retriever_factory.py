@@ -1,6 +1,6 @@
 from .shotchart_retriever import ShotchartRetriever
 from .players_retriever import PlayersRetriever
-from nba_shotcharts.utils import constants
+from nba_stats.utils import constants
 
 
 class ApiRetrieverFactory:
