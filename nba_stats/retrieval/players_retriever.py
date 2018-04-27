@@ -40,3 +40,12 @@ class PlayersRetriever(ApiRetriever):
         """
         pandas_data = self.get_players()
         return pandas_data.loc[pandas_data.DISPLAY_FIRST_LAST == player_name]
+
+    def get_player_id(self, player_name):
+        """
+        Returns player id based on player's name.
+        :param player_name: Name of the player whose ID wants to be retrieved.
+        :return: player's id, used for further fetching of data.
+        """
+        pandas_data = self.get_players()
+        return pandas_data.loc[pandas_data.DISPLAY_FIRST_LAST == player_name].iloc[0].PERSON_ID
