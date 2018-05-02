@@ -9,6 +9,7 @@ class ApiRetriever:
     def __init__(self, api_param):
         """
         Base class constructor which initializes data which is common to all retrievers.
+
         :param api_param: Api parameter for that specific use case.
         """
         self.base_url = "http://stats.nba.com/stats/"
@@ -24,6 +25,7 @@ class ApiRetriever:
     def build_url_string(self):
         """
         Uses all params that are set and builds url string which can be used to retrieve data from stats.nba.com.
+
         :return: URL string.
         """
         url = self.base_url + self.api_param + "?"
@@ -42,6 +44,7 @@ class ApiRetriever:
     def load_nba_dataset(self, index=0):
         """
         Loads the dataset from json data which is set based on API parameters.
+
         :param index: Often resultSets have mulitple results, but that depends on usecase so we will leave to inherited
         class to make decision of index choice.
         :return: Pandas data frame.
@@ -57,6 +60,7 @@ class ApiRetriever:
     def get_json_from_api_parameters(self):
         """
         Fetches the json file from given url string.
+
         :return: Json object.
         """
         url = self.build_url_string()

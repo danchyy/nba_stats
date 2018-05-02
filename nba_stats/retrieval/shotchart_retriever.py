@@ -12,6 +12,7 @@ class ShotchartRetriever(ApiRetriever):
                  game_id="", player_position=""):
         """
         Constructor for retriever of data.
+
         :param period: In which period shots were made (1, 2, 3, 4, 5 for OT) or 0 for all periods.
         :param vs_conference: Conference can be either 'West' or 'East' or empty.
         :param league_id: ID of the league, either 00, 20 or 10 (00 is normal NBA).
@@ -134,6 +135,7 @@ class ShotchartRetriever(ApiRetriever):
     def get_shotchart(self):
         """
         Returns shotchart data for parameters that are set.
+
         :return: Shotchart data in Pandas DataFrame object.
         """
         # Returning pandas data frame
@@ -150,6 +152,7 @@ class ShotchartRetriever(ApiRetriever):
     def get_league_averages(self):
         """
         Returns the league averages data for some spots on the court.
+
         :return: League averages data in Pandas DataFrame object.
         """
         return self.load_nba_dataset(index=1)
@@ -158,6 +161,7 @@ class ShotchartRetriever(ApiRetriever):
         """
         Creates shotchart data only for zones which are given as argument. Available zones are 'Mid-Range',
         'Restricted Area', 'Left Corner 3', 'In The Paint (Non-RA)', 'Above the Break 3', 'Right Corner 3'.
+
         :param zones: Zones upon which the shots will be filtered.
         :return: Zone filtered shotchart data.
         """
@@ -170,6 +174,7 @@ class ShotchartRetriever(ApiRetriever):
         """
         Creates shotchart data only for areas which are given as argument. Available areas are 'Right Side Center(RC)',
         'Left Side Center(LC)', 'Center(C)', 'Left Side(L)', 'Right Side(R)'.
+
         :param areas: Areas upon which the shots will be filtered.
         :return: Area filtered shotchart data.
         """
@@ -182,6 +187,7 @@ class ShotchartRetriever(ApiRetriever):
         """
         Creates shotchart data only for ranges which are given as argument. Available ranges are '16-24 ft.',
         'Less Than 8 ft.', '24+ ft.', '8-16 ft.'.
+
         :param ranges: Ranges upon which the shots will be filtered.
         :return: Ranges filtered shotchart data.
         """
@@ -194,6 +200,7 @@ class ShotchartRetriever(ApiRetriever):
         """
         Retrieves shotchart data for combination of zones, areas and ranges. If None or empty array
         is given for any of the arguments that argument will be excluded from combination.
+
         :param zones: Zones which will be used for filtering data.
         :param areas: Areas which will be used for filtering data.
         :param ranges: Ranges which will be used for filtering data.
