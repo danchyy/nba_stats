@@ -1,4 +1,4 @@
-from .api_retriever import ApiRetriever
+from nba_stats.retriever_factories.api_retriever import ApiRetriever
 from nba_stats.utils import constants
 
 

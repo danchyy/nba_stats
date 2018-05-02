@@ -1,5 +1,5 @@
-from .shotchart_retriever import ShotchartRetriever
-from .players_retriever import PlayersRetriever
+from nba_stats.retrieval.shotchart_retriever import ShotchartRetriever
+from nba_stats.retrieval.players_retriever import PlayersRetriever
 from nba_stats.utils import constants
 
 
