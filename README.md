@@ -12,14 +12,9 @@ Table of contents:
 
 ### Installation 
 
-For installation of this package, all you have to do is clone repo
-and invoke pip:
+You can install this package through pip system:
 
-`git clone git@github.com:danchyy/nba_stats.git`
-
-`cd nba_stats`
-
-`pip install .`
+`pip3 install nba_stats`
 
 ### Usage Instructions
 
