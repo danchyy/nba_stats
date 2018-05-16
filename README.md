@@ -2,7 +2,7 @@
 
 This project uses NBA's api to retrieve data about various statistics for NBA players and teams.
 
-It is written in Python3 (should work for Python2 as well). 
+It is written in Python3. 
 
 Table of contents:
 
