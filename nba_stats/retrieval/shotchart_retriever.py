@@ -4,15 +4,15 @@ import pandas as pd
 
 
 class ShotchartRetriever(ApiRetriever):
-    def __init__(self, period=0, vs_conference="", league_id="00", last_n_games=0, team_id=0, location="", outcome="",
-                 context_measure="FGA", date_from="", date_to="", opponent_team_id=0, range_type=0,
-                 season=constants.CURRENT_SEASON, ahead_behind="", player_id=0, vs_division="", point_diff="",
+    def __init__(self,  player_id=0, period=0, vs_conference="", league_id="00", last_n_games=0, team_id=0, location="",
+                 outcome="", context_measure="FGA", date_from="", date_to="", opponent_team_id=0, range_type=0,
+                 season=constants.CURRENT_SEASON, ahead_behind="", vs_division="", point_diff="",
                  rookie_year="", game_segment="", month=0, clutch_time="", season_type="Regular Season",
-                 season_segment="",
-                 game_id="", player_position=""):
+                 season_segment="", game_id="", player_position=""):
         """
         Constructor for retriever of data.
 
+        :param player_id: Player ID from NBA's database, obligatory.
         :param period: In which period shots were made (1, 2, 3, 4, 5 for OT) or 0 for all periods.
         :param vs_conference: Conference can be either 'West' or 'East' or empty.
         :param league_id: ID of the league, either 00, 20 or 10 (00 is normal NBA).
@@ -28,7 +28,6 @@ class ShotchartRetriever(ApiRetriever):
         :param range_type: 0 for all shots, 1 and 2 for areas only, default 0.
         :param season: Format of yyyy-yy.
         :param ahead_behind: One of 'Ahead or Behind', 'Ahead or Tied', 'Behind or Tied' or empty.
-        :param player_id: Player ID from NBA's database, obligatory.
         :param vs_division: One of following divisions: 'Atlantic', 'Central', 'Northwest', 'Pacific', 'Southeast',
         'Southwest', 'East', 'West'.
         :param point_diff: One or more digits, or empty.

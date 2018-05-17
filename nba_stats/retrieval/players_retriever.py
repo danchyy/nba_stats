@@ -42,7 +42,7 @@ class PlayersRetriever(ApiRetriever):
         :return: Row from DataFrame if that player exists, otherwise empty row.
         """
         pandas_data = self.get_players()
-        return pandas_data.loc[pandas_data.DISPLAY_FIRST_LAST == player_name]
+        return pandas_data.loc[pandas_data.DISPLAY_FIRST_LAST.str.lower() == player_name.lower()]
 
     def get_player_id(self, player_name):
         """
@@ -51,5 +51,5 @@ class PlayersRetriever(ApiRetriever):
         :param player_name: Name of the player whose ID wants to be retrieved.
         :return: player's id, used for further fetching of data.
         """
-        pandas_data = self.get_players()
-        return pandas_data.loc[pandas_data.DISPLAY_FIRST_LAST == player_name].iloc[0].PERSON_ID
+        player_data = self.get_player(player_name)
+        return player_data.iloc[0].PERSON_ID
