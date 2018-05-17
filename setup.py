@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name="nba_stats",
-    version="0.1",
+    version="0.1.1",
     packages=find_packages(exclude=['tests']),
 
     install_requires=['docutils>=0.3', 'pandas>=0.20.3', 'requests'],
