@@ -1,2 +1,4 @@
 .idea/
 *.pyc
+dist/
+nba_stats.egg-info/
